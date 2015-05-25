@@ -44,7 +44,7 @@
      `(isearch-fail ((t (:background unspecified :foreground ,base04))))
      `(match ((t (:background ,focus-color :foreground unspecified))))
      `(menu ((t (:background ,text-color :foreground ,background-color))))
-     `(region ((t (:background ,base00 :foreground unspecified))))
+     `(region ((t (:background ,base09 :foreground ,base00))))
      `(warning ((t (:foreground ,warning-color))))
      `(linum ((t (:foreground ,focus-color :background nil :underline nil))))
 
@@ -139,14 +139,14 @@
 
      ;; Markdown Mode ;;
      ;;;;;;;;;;;;;;;;;;
-     `(markdown-header-face   ((t (:foreground ,base03))))
-     `(markdown-header-face-6 ((t (:foreground ,base03))))
-     `(markdown-header-face-5 ((t (:foreground ,base04))))
-     `(markdown-header-face-4 ((t (:foreground ,highlight-color))))
-     `(markdown-header-face-3 ((t (:foreground ,string-face))))
-     `(markdown-header-face-2 ((t (:foreground ,link-color))))
-     `(markdown-header-face-1 ((t (:foreground ,constant-face))))
-     `(markdown-bold-face  ((t (:foreground ,base03 :bold t))))
+     `(markdown-header-face   ((t (:foreground ,base06))))
+     `(markdown-header-face-1 ((t (:foreground ,base06))))
+     `(markdown-header-face-2 ((t (:foreground ,base06))))
+     `(markdown-header-face-3 ((t (:foreground ,base06))))
+     `(markdown-header-face-4 ((t (:foreground ,base06))))
+     `(markdown-header-face-5 ((t (:foreground ,base06))))
+     `(markdown-header-face-6 ((t (:foreground ,base06))))
+     `(markdown-bold-face  ((t (:foreground ,base04 :bold t))))
      `(markdown-blockquote-face  ((t (:foreground,comment-color :italic t))))
 
      ;; ERC Mode ;;
