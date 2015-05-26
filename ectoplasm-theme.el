@@ -16,9 +16,11 @@
       (base06 "#CB90cD")
       (base07 "#644D64")
       (base08 "#94BDC2")
-      (base09 "#ffdd77"))
+      (base09 "#ffdd77")
+      (base10 "#332233"))
 
   (let ((background-color base01)
+        (region-color base10)
         (focus-color base02)
         (constant-face base08)
         (comment-color base07)
@@ -32,19 +34,20 @@
         (variable-color base02)
         (function-color base02)
         (keyword-face base04)
-        (warning-color base04))
+        (warning-color base04)
+        (error-color base04))
 
     (custom-theme-set-faces
      'ectoplasm
 
      ;; Basics
-     `(cursor ((t (:background ,base02, :foreground unspecified))))
+     `(cursor ((t (:background ,focus-color, :foreground unspecified))))
      `(default ((t (:background ,background-color :foreground ,text-color :weight light ))))
      `(isearch ((t (:background ,highlight-color :foreground ,background-color ))))
-     `(isearch-fail ((t (:background unspecified :foreground ,base04))))
+     `(isearch-fail ((t (:background unspecified :foreground ,error-color))))
      `(match ((t (:background ,focus-color :foreground unspecified))))
      `(menu ((t (:background ,text-color :foreground ,background-color))))
-     `(region ((t (:background ,base09 :foreground ,base00))))
+     `(region ((t (:background ,region-color :foreground unspecified))))
      `(warning ((t (:foreground ,warning-color))))
      `(linum ((t (:foreground ,focus-color :background nil :underline nil))))
 
@@ -52,9 +55,9 @@
      `(link ((t (:underline t))))
      `(link-visited ((t (:underline t))))
 
-     `(hl-line ((t :background ,base01)))
-     `(highlight ((t (:background ,base02 :foreground unspecified))))
-     `(lazy-highlight ((t (:background ,base01 :foreground ,text-color))))
+     `(hl-line ((t :background ,background-color)))
+     `(highlight ((t (:background ,focus-color :foreground unspecified))))
+     `(lazy-highlight ((t (:background unspecified :foreground ,text-color))))
 
      `(minibuffer-prompt ((t (:background ,background-color :foreground ,base02 :height 110 :weight thin))))
      `(mode-line ((t (:background ,base00 :foreground ,base06 :height 110 :box(:line-width 7 :color ,base00)))))
@@ -208,8 +211,8 @@
      `(web-mode-block-face ((t (:foreground ,text-color, :background unspecified ))))
      `(web-mode-block-delimiter-face ((t (:foreground ,base04, :background unspecified ))))
      `(web-mode-block-control-face ((t (:foreground ,base04, :background unspecified ))))
-     `(web-mode-builtin-face ((t (:inherit font-lock-builtin-face ))))
-     `(web-mode-constant-face ((t (:inherit font-lock-constant-face))))
+     `(web-mode-builtin-face ((t (:inherit font-lock-constant-face ))))
+     `(web-mode-constant-face ((t (:inherit font-lock-builtin-face))))
      `(web-mode-current-element-highlight-face ((t (:foreground ,base04 :background nil ))))
      `(web-mode-folded-face ((t (:foreground unspecified :underline (:color ,base04 :style wave)))))
      `(web-mode-html-attr-equal-face ((t (:foreground ,comment-color ))))
@@ -231,7 +234,7 @@
 
      `(js2-external-variable ((t :foreground ,builtin-face)))
      `(js2-warning ((t (:foreground unspecified :underline (:color ,base04 :style wave)))))
-     `(js2-function-param ((t (:foreground ,base08))))
+     `(js2-function-param ((t (:foreground ,base07))))
 
      ;; multi-mark mode
      `(mc/master-face ((t (:inherit 'lazy-highlight))))
