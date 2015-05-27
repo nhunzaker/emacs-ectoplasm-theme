@@ -28,7 +28,7 @@
         (text-color base02)
         (builtin-face base06)
         (error-color base03)
-        (link-color base07)
+        (link-color base06)
         (string-face base05)
         (type-face base08)
         (variable-color base02)
@@ -102,7 +102,7 @@
      `(flx-highlight-face ((t (:foreground ,base06 :background unspecified))))
 
      ;; Makefile
-     `(makefile-targets ((t (:foreground ,link-color))))
+     `(makefile-targets ((t (:foreground ,builtin-face))))
 
      ;; Errors
      ;;;;;;;;;
@@ -137,7 +137,7 @@
      `(css-selector ((t (:foreground ,base04 ))))
      `(css-property ((t (:foreground ,base06 ))))
      `(css-proprietary-property ((t (:foreground ,text-color :italic t))))
-     `(scss-variable-color ((t (:foreground ,link-color))))
+     `(scss-variable-color ((t (:foreground ,base08))))
      `(scss-keyword-face ((t (:foreground ,keyword-face ))))
 
      ;; Markdown Mode ;;
@@ -222,7 +222,7 @@
      `(web-mode-html-tag-face ((t (:foreground ,base02 ))))
      `(web-mode-keyword-face ((t (:inherit font-lock-keyword-face))))
      `(web-mode-preprocessor-face ((t (:inherit font-lock-preprocessor-face ))))
-     `(web-mode-symbol-face ((t (:foreground ,link-color ))))
+     `(web-mode-symbol-face ((t (:foreground ,base08 ))))
      `(web-mode-type-face ((t (:inherit font-lock-type-face ))))
      `(web-mode-variable-name-face ((t (:inherit font-lock-variable-color ))))
      `(web-mode-whitespace-face ((t (:foreground "red" :background: "red"))))
